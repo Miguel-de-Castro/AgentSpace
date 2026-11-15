@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AgentSpace: controle de missão para um time de IA no seu repositório</title>
+  <meta name="description" content="AgentSpace coordena um time de agentes de IA dentro do seu repositório git, em worktrees isolados. Você vê o diff e as evidências e decide. Nunca faz merge.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/styles.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="AgentSpace: um time de IA no seu repositório, com a decisão final na sua mão">
+  <meta property="og:description" content="Missions rodam em worktrees git isolados. Diff, build e revisões à vista antes de você permitir. Nunca faz merge.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/Miguel-de-Castro/AgentSpace/main/landing/static/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tela de aprovação de uma Mission no AgentSpace, com o título e o resumo do projeto">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AgentSpace: um time de IA no seu repositório, com a decisão final na sua mão">
+  <meta name="twitter:description" content="Missions rodam em worktrees git isolados. Diff, build e revisões à vista antes de você permitir. Nunca faz merge.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/Miguel-de-Castro/AgentSpace/main/landing/static/og.png">
+</head>
+<body>
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="top">
+    <div class="wrap top-row">
+      <a class="brand" href="/" aria-label="AgentSpace, início">
+        <img src="/static/favicon.svg" width="24" height="24" alt="">
+        <span>AgentSpace</span>
+      </a>
+      <nav aria-label="Principal">
+        <a class="nav-link" href="#telas">Telas</a>
+        <a class="nav-link" href="#decisoes">Decisões</a>
+        <a class="nav-link" href="#como-rodar">Como rodar</a>
+        <a class="nav-link nav-gh" href="https://github.com/Miguel-de-Castro/AgentSpace" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" aria-labelledby="titulo">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1 id="titulo">Um time de IA no seu repositório. A decisão final é sua.</h1>
+          <p class="lead">AgentSpace roda Missions em worktrees git isolados e mostra o diff e as evidências. Nada chega à main sem você.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://github.com/Miguel-de-Castro/AgentSpace" rel="noopener">Ver código no GitHub</a>
+            <a class="btn btn-ghost" href="#como-rodar">Como rodar</a>
+          </div>
+        </div>
+        <figure class="hero-shot">
+          <img src="/static/mission-detail.png" width="1440" height="900" alt="Tela de uma Mission aguardando decisão: botão para rodar a versão da Mission, diff de um arquivo e os botões Don't Allow e Allow, em modo de simulação" fetchpriority="high">
+        </figure>
+      </div>
+    </section>
+
+    <section class="flow" aria-labelledby="fluxo">
+      <div class="wrap">
+        <h2 id="fluxo">Você descreve. O time executa. Você decide.</h2>
+        <p class="section-sub">Não é um chat nem um quadro de tickets. É uma superfície de supervisão: você sai, e volta para resultados prontos para decidir.</p>
+        <ol class="steps">
+          <li>
+            <h3>Conectar</h3>
+            <p>Aponte uma pasta local ou um remoto. A branch padrão é detectada e tratada como protegida.</p>
+          </li>
+          <li>
+            <h3>Descrever</h3>
+            <p>Escreva o pedido e, se quiser, os critérios de aceite. Escolha quais papéis participam.</p>
+          </li>
+          <li>
+            <h3>Executar</h3>
+            <p>Planner, Developer, QA e Reviewer rodam em sequência no mesmo worktree, com evidências ao vivo por papel.</p>
+          </li>
+          <li>
+            <h3>Decidir</h3>
+            <p>Diff, build antes e depois e revisões no mesmo lugar. Allow faz rebase e push. O PR é seu.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="shots" id="telas" aria-labelledby="telas-t">
+      <div class="wrap">
+        <h2 id="telas-t">As telas, de verdade</h2>
+        <p class="section-sub">Capturas do app rodando no provedor simulado, sobre um repositório de demonstração. Por isso aparece o aviso de simulação.</p>
+        <div class="bento">
+          <figure class="b-a">
+            <img src="/static/parallel-supervision.png" width="1440" height="900" loading="lazy" alt="Supervisão paralela: duas Missions aguardando você e uma finalizada">
+            <figcaption>Supervisão paralela: o que espera por você, o que roda e o que terminou.</figcaption>
+          </figure>
+          <figure class="b-b">
+            <img src="/static/today.png" width="1440" height="900" loading="lazy" alt="Tela Hoje listando dois resultados para decidir">
+            <figcaption>Hoje: tudo que espera por você, em todos os projetos.</figcaption>
+          </figure>
+          <figure class="b-c">
+            <img src="/static/project.png" width="1440" height="900" loading="lazy" alt="Visão de um projeto com a lista de Missions">
+            <figcaption>Projeto com suas Missions.</figcaption>
+          </figure>
+          <figure class="b-d">
+            <img src="/static/project-settings.png" width="1440" height="900" loading="lazy" alt="Configurações do projeto: política de permissão e elenco do time">
+            <figcaption>Permissão e elenco por projeto.</figcaption>
+          </figure>
+          <figure class="b-e">
+            <img src="/static/dashboard.png" width="1440" height="900" loading="lazy" alt="Painel de projetos com a contagem do que precisa de você em cada um">
+            <figcaption>Projetos e o que precisa de você.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="decisions" id="decisoes" aria-labelledby="decisoes-t">
+      <div class="wrap decisions-grid">
+        <div class="decisions-head">
+          <h2 id="decisoes-t">Decisões técnicas que importam</h2>
+          <p class="section-sub">Como o projeto evita que um time autônomo vire um risco para o seu repositório e para a sua máquina.</p>
+        </div>
+        <dl class="decisions-list">
+          <div>
+            <dt>Nunca faz merge</dt>
+            <dd>Allow faz rebase da branch da Mission sobre a base e push com <code>--force-with-lease</code> para o <code>origin</code>, usando as credenciais git que você já tem. O PR é manual.</dd>
+          </div>
+          <div>
+            <dt>Um worktree por Mission</dt>
+            <dd>Cada Mission trabalha numa branch legível, derivada do pedido, isolada da sua pasta de trabalho. Várias rodam em paralelo, com limite configurável.</dd>
+          </div>
+          <div>
+            <dt>Build verificado na base e no resultado</dt>
+            <dd>O comando de build e teste roda nos dois commits. Assim dá para separar "esta Mission quebrou" de "já estava quebrado".</dd>
+          </div>
+          <div>
+            <dt>Guarda de segredos</dt>
+            <dd>Arquivos como <code>.env</code>, chaves <code>.pem</code> e <code>id_rsa</code> ficam fora do commit da Mission e são sinalizados na tela de aprovação.</dd>
+          </div>
+          <div>
+            <dt>Servidor só local</dt>
+            <dd>A API executa git e shell, então escuta apenas em 127.0.0.1 e recusa Host ou Origin que não sejam loopback, o que bloqueia sites externos e DNS rebinding.</dd>
+          </div>
+          <div>
+            <dt>Provedor isolado atrás de um adaptador</dt>
+            <dd>Só uma camada conhece o Claude Code. O resto fala com uma interface, e um provedor simulado permite desenvolver sem chamadas reais. Trabalho simulado nunca pode ser aprovado.</dd>
+          </div>
+        </dl>
+        <p class="stack">Stack: Node.js 22+ com <code>node:sqlite</code>, Express, SSE para atualização ao vivo, React 18, TypeScript, Vite e Tailwind v4.</p>
+      </div>
+    </section>
+
+    <section class="run" id="como-rodar" aria-labelledby="rodar-t">
+      <div class="wrap run-grid">
+        <div>
+          <h2 id="rodar-t">Como rodar localmente</h2>
+          <p class="section-sub">Não há versão hospedada: o app executa git e shell na sua máquina. Requer Node.js 22.13+ e git. Para Missions reais, o CLI do Claude Code instalado e autenticado.</p>
+          <p class="section-sub">Por padrão o provedor é simulado, sem chamadas de IA. Para o time real, defina <code>AGENTSPACE_PROVIDER=claude-code</code> no <code>.env</code>.</p>
+        </div>
+        <figure class="term">
+          <figcaption>Terminal</figcaption>
+          <pre><code>git clone https://github.com/Miguel-de-Castro/AgentSpace.git
+cd AgentSpace
+npm install
+npm install --prefix web
+cp .env.example .env
+npm run dev:all
+# API em :4310, interface em http://localhost:5173</code></pre>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-row">
+      <p>Projeto pessoal de <a href="https://github.com/Miguel-de-Castro" rel="noopener">Miguel Castro</a>. Licença MIT.</p>
+      <p><a href="https://github.com/Miguel-de-Castro/AgentSpace" rel="noopener">Ver código no GitHub</a></p>
+    </div>
+  </footer>
+</body>
+</html>

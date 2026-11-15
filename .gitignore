@@ -1,0 +1,48 @@
+node_modules/
+dist/
+dist-web/
+*.log
+.env
+.DS_Store
+
+# Local runtime data — SQLite store and managed git worktrees, never committed
+data/
+worktrees/
+
+# Scratch screenshots from mockup verification sessions
+*.png
+.playwright-mcp/
+
+# Claude Code scratch state
+.claude/tmp/
+.claude/cache/
+.claude/history/
+.claude/transcripts/
+
+# Local-only tool config (machine-specific permissions / MCP setup)
+.claude/settings.local.json
+.codex/
+
+# Archives (e.g. the old Stitch design export, kept locally only)
+*.zip
+
+# Exception to *.png: README screenshots
+!docs/screenshots/*.png
+
+# Raw session transcript and local-only memory (real repo paths behind the repo-teste-* aliases)
+claudeee.md
+.claude/memory/LOCAL.md
+
+# Working notes kept local (session memory, plans, ADRs, brainstorms, local CLAUDE notes) — not published
+CLAUDE.local.md
+.claude/memory/
+.claude/plans/
+docs/notes/
+
+# Any env file except the example; stray SQLite files
+.env.*
+!.env.example
+*.db
+*.db-wal
+*.db-shm
+*.sqlite

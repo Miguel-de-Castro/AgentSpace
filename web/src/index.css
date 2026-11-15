@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+/*
+  AgentSpace is dark-only by design (docs/06-DESIGN_GUARDRAILS.md) — these are
+  the only tokens the app defines, not a ".dark" override of a light default.
+
+  Palette: "Terminal frio", a cool terminal-style dark palette that replaced the
+  violet tokens of the early mockups.
+*/
+:root {
+  --background: #0a0e12;
+  --foreground: #e4e9ee;
+
+  --surface: #12181f;
+  --surface-high: #1a222b;
+  --surface-highest: #212a33;
+  --outline: #212a33;
+
+  --primary: #f0a955;
+  --primary-foreground: #241505;
+  --primary-container: #f0a955;
+  --on-primary-container: #241505;
+
+  --muted: #1a222b;
+  --muted-foreground: #8b98a5;
+
+  --card: #12181f;
+  --card-foreground: #e4e9ee;
+  --popover: #12181f;
+  --popover-foreground: #e4e9ee;
+
+  --secondary: #1a222b;
+  --secondary-foreground: #e4e9ee;
+
+  --accent: #1a222b;
+  --accent-foreground: #e4e9ee;
+
+  /* Rejected: neutral/expected outcome, never alarming — deliberately the same
+     tone as muted-foreground, not a distinct hue (guardrail #5). */
+  --rejected: #8b98a5;
+  --rejected-foreground: #0a0e12;
+
+  /* Failed: the one state allowed to read as an actual problem (guardrail #4). */
+  --destructive: #ef7a63;
+  --destructive-foreground: #2b0f08;
+
+  /* Completed: calm affirmative, distinct from both of the above. */
+  --success: #7fd9a0;
+  --success-foreground: #0a2414;
+
+  --border: #212a33;
+  --input: #212a33;
+  --ring: #f0a955;
+
+  --radius: 0.625rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-surface: var(--surface);
+  --color-surface-high: var(--surface-high);
+  --color-surface-highest: var(--surface-highest);
+  --color-outline: var(--outline);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary-container: var(--on-primary-container);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-rejected: var(--rejected);
+  --color-rejected-foreground: var(--rejected-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+body {
+  @apply bg-background text-foreground;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+* {
+  border-color: var(--border);
+}

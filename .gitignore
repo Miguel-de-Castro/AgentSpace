@@ -11,6 +11,8 @@ worktrees/
 
 # Scratch screenshots from mockup verification sessions
 *.png
+!docs/screenshots/*.png
+!landing/static/*.png
 .playwright-mcp/
 
 # Claude Code scratch state

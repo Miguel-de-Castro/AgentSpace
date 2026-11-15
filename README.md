@@ -2,6 +2,8 @@
 
 **Mission control for an AI software team working inside your own git repository.**
 
+**Landing page:** https://agentspace-miguel.vercel.app
+
 You describe a *Mission* ("add a dueDate field and sort overdue items first"). AgentSpace gives it to a team of AI roles (Planner, Developer, QA, Reviewer, Challenger), which work in an isolated git worktree on its own branch. You then see what resulted and what evidence backs it before deciding anything. Nothing reaches your protected branch without a human decision. AgentSpace never merges and never opens a PR for you.
 
 It is deliberately **not** a chat UI and not a ticket tracker. It's a calm supervision surface: you start Missions, step away, and come back to results that are ready for a decision.
